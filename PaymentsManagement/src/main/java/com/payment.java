@@ -133,16 +133,16 @@ public class payment {
         		String pDate = resultSet.getString("pDate");
 
         		// Add a row into the HTML table
-        		Output += "<tr><td><input id='hidItemIDUpdate' pCus='hidItemIDUpdate' type='hidden' value='"+pID+"'>" + pAccNo + "</td>"; 
+        		Output += "<tr><td><input id='hidItemIDUpdate' name='hidItemIDUpdate' type='hidden' value='"+pID+"'>" + pAccNo + "</td>"; 
         		Output += "<td>" + pCus + "</td>"; 
         		Output += "<td>" + pAmount + "</td>"; 
         		Output += "<td>" + pDate + "</td>";
 
         		// buttons
-        		Output += "<td><input pCus='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-sm btn-secondary'></td>" 
+        		Output += "<td><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-sm btn-secondary'></td>" 
         				+ "<td><form method='post' action='paymanage.jsp'>"
-        				+ "<input pCus='btnRemove' type='submit' value='Remove' class='btn btn-sm btn-danger'>"
-        				+ "<input pCus='hidItemIDDelete' type='hidden' value='" + pID + "'>"
+        				+ "<input name='btnRemove' type='submit' value='Remove' class='btn btn-sm btn-danger'>"
+        				+ "<input name='hidItemIDDelete' type='hidden' value='" + pID + "'>"
         				+ "</form></td></tr>";
         	}
 
